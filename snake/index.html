@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Arena - Full Screen Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-container">
+        <header class="topbar">
+            <div class="brand">
+                <span class="brand-icon">🐍</span>
+                <div>
+                    <h1>SNAKE<span>ARENA</span></h1>
+                    <p>CLASSIC ARCADE • REIMAGINED</p>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <span>SCORE</span>
+                    <strong id="score">000</strong>
+                </div>
+                <div class="stat-card">
+                    <span>BEST</span>
+                    <strong id="best">000</strong>
+                </div>
+            </div>
+
+            <div class="top-actions">
+                <button id="soundBtn" class="icon-btn" title="Toggle sound">🔊</button>
+                <button id="pauseBtn" class="icon-btn" title="Pause game">Ⅱ</button>
+                <button id="fullBtn" class="icon-btn" title="Fullscreen">⛶</button>
+            </div>
+        </header>
+
+        <section class="arena">
+            <div class="arena-label">
+                <span><i class="live-dot"></i> GAME ARENA</span>
+                <span id="status">READY TO PLAY</span>
+            </div>
+
+            <div class="canvas-wrap">
+                <canvas id="gameCanvas"></canvas>
+
+                <div class="overlay" id="overlay">
+                    <div class="overlay-content">
+                        <div class="big-icon" id="overlayIcon">🐍</div>
+                        <p class="eyebrow" id="overlayEyebrow">WELCOME TO THE ARENA</p>
+                        <h2 id="overlayTitle">SNAKE <span>EVOLUTION</span></h2>
+                        <p class="overlay-description" id="overlayDescription">
+                            Eat. Grow. Survive. Beat your high score.
+                        </p>
+                        <button id="startBtn" class="primary-btn">▶ &nbsp; START GAME</button>
+                        <p class="hint">PRESS <kbd>SPACE</kbd> TO START</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="arena-footer">
+                <div class="control-info">
+                    <span>MOVE</span>
+                    <div class="key-group">
+                        <kbd>↑</kbd>
+                        <div class="key-row">
+                            <kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd>
+                        </div>
+                    </div>
+                    <span class="or">OR</span>
+                    <div class="key-row"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></div>
+                </div>
+
+                <div class="footer-message">
+                    <span class="food-dot"></span>
+                    EAT FOOD <span class="separator">•</span> GROW LONGER
+                </div>
+
+                <button id="restartBtn" class="secondary-btn">↻ RESTART</button>
+            </footer>
+        </section>
+
+        <div class="bottom-note">
+            <span>● SYSTEM ONLINE</span>
+            <span>BUILT FOR ARCADE LOVERS <br>by ALTMASH RAZA
+            </span>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
